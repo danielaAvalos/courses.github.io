@@ -1,0 +1,738 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'roboto', 'Open Sans', sans-serif;
+    margin: 0;
+    background: white;
+   
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+li{ font-size: 1.25em;}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: blue;
+}
+
+button:hover{
+    background-color: rgb(0, 4, 243);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:rgb(0, 4, 243); }
+
+
+/* * ===== HEADER ====== */
+
+header{
+    background-color: rgb(245,245,245);
+    
+}
+
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+    position: sticky;
+    top: 0;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(46, 0, 121);
+}
+
+header a:hover{
+    color: rgb(226, 153, 43);
+}
+
+
+/* * ===== NAVBAR ====== */
+
+.navbar {
+    background-color: rgb(245,245,245);
+	background: #FFCD48;
+    position: sticky;
+    top: 0px;
+}
+
+.navbar a {
+	color: #fff;
+	display: inline-block;
+	padding: 40px;
+	width: 100%;
+	text-align: center;
+	color: #080027;
+	transition: .3s ease-out all;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none;
+    
+}
+
+
+.contenido {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/* * ===== CONTENEDOR IMAGEN ====== */
+
+#diploma{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.5)
+    )
+    ,url("/imag/archivoimag/imagen225.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#diploma h1{
+    color: white;
+}
+
+#diploma button{
+    font-size: 1.75em;
+}
+
+
+#somos-expertos .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#webinar{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#webinar .container{
+    padding: 150px 12px;
+}
+
+#webinar h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#webinar p{
+    display: none;
+}
+
+#webinar .banner{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.banner:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(247, 3, 64, 0.5),
+        rgba(247, 3, 64, 0.5)
+    )
+    ,url("/imag/archivoimag/pictures1.png");
+
+}
+
+.banner:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(247, 3, 64, 0.5),
+        rgba(247, 3, 64, 0.5)
+    )
+    ,url("/imag/archivoimag/picture2.png");
+}
+
+.banner:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(247, 3, 64, 0.5),
+        rgba(247, 3, 64, 0.5)
+    )
+    ,url("/imag/archivoimag/pictures3.png");
+
+}
+
+#talentos .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#talentos li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+/* * ========== FOOTER ============ */
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(226, 153, 43);
+    color: #080027;
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 9vw;
+}
+
+#final button{
+    font-size: 5vw;
+}
+
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* * ====== MEDIA QUERIES escritorio ========= */
+
+@media (min-width: 850px){
+    header{
+        position: fixed;
+        width: 100%;
+        position: sticky;
+        top: 0;
+    }
+
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    .navbar {
+        background: #FFCD48;
+        position: sticky;
+        top: 0;
+        
+    }
+    
+    .navbar a {
+        color: #fff;
+        display: inline-block;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        color: #170179;
+        transition: .3s ease-out all;
+    }
+    
+    .navbar a:hover {
+        background: #1D2F3D;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .contenido {
+        max-width: 1000px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    #diploma h1{
+        font-size: 5em;
+    }
+
+    #somos-expertos .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos-expertos .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somos-expertos h2{
+        margin-top: 0px;
+    }
+
+    #somos-expertos .img-container{
+        background-image: url("/imag/archivoimag/expertocv.png");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px; 
+    }
+
+    #webinar .esquemas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #webinar p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #webinar h2{
+        font-size: 4em;
+    }
+
+    #webinar h3{
+        margin-top: 0;
+    }
+
+    #webinar .banner{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(50, 50, 50, 1);
+        box-shadow: 2px 2px 10px rgba(2, 36, 228, 0.5);
+    }
+
+    .banner:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(247, 3, 64, 0.5),
+            rgba(247, 3, 64, 0.5)
+        )
+        ,url("/imag/archivoimag/pictures1.png");
+
+    }
+
+    .banner:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(247, 3, 64, 0.5),
+            rgba(247, 3, 64, 0.5)
+        )
+        ,url("/imag/archivoimag/picture2.png");
+    }
+
+    .banner:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(247, 3, 64, 0.5),
+            rgba(247, 3, 64, 0.5)
+        )
+        ,url("/imag/archivoimag/pictures3.png");
+
+    }
+
+    #talentos{
+        background-image: url("/imag/archivoimag/picture6.png");
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+    #talentos .container{
+        text-align: initial;
+    }
+
+    #talentos ul{
+        margin-left: 100px;
+    }
+
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1200px) {
+    #talentos{
+        background-position-x: calc(100vw - 800px);
+    }
+}
+
+
+/* -- MAIN -- */
+main {
+	margin-top: 150px;
+}
+
+main .contenedor {
+	width: 85%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+main .titulo {
+    font-family: 'Montserrat', sans-serif;
+	padding: 40px;
+	width: 100%;
+    font-weight: bold;
+    color: #032d3d;
+    margin: 50px 0;
+	line-height: 28px;
+	font-weight: normal;
+	margin-bottom: 20px;
+    font-size: 5rem;
+    text-align: center;
+}
+
+/* ------------------------- */
+
+/* Estilos CSS del Reproductor */
+
+.fm-video {
+	width: 100%;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,.5);
+}
+
+.fm-video .vjs-control-bar {
+	background: #F4F4F4;
+	color: #2d5f85;
+}
+
+.fm-video .vjs-play-progress,
+.fm-video .vjs-volume-level {
+	background: #1d87d8;
+}
+
+.fm-video .vjs-slider {
+	background: #2d5f85;
+}
+
+.video-js:hover .vjs-big-play-button {
+	background: rgba(0,0,0,.2);
+}
+
+.fm-video .vjs-big-play-button {
+	background: rgba(0,0,0,.2);
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	border-radius: 100%;
+	border:none;
+}
+
+.fm-video .vjs-big-play-button:hover {
+	background: rgba(0,0,0,.5);
+}
+
+article {
+	margin: 50px 0;
+	background: #fff;
+	color: #000;
+	font-size: 16px;
+	line-height: 28px;
+	padding: 40px;
+}
+
+article h2 {
+	color: #2D5F85;
+	font-size: 32px;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	
+
+	main {
+		margin-top: 50px;
+	}
+
+}
+
+/* --TERMINA AQUI EL VIDEO-- */
+
+
+/* preguntas frecuentes */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.conteiner {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.conteiner-faq {
+    box-shadow: 0 0 15px -1px rgba(0,0,0,.1);
+    padding: 30px;
+}
+
+.conteiner-faq .title-faq {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.conteiner-faq .item-faq {
+    box-shadow: 0 0 15px -1px rgba(0,0,0,.2);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.conteiner-faq .item-faq .question {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(43, 51, 122, .2);
+    padding: 20px 20px 20px 80px;
+    transition: .4s;
+}
+
+.conteiner-faq .item-faq .question .more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px -1px rgba(0,0,0,.2);
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.conteiner-faq .item-faq .question .more:hover {
+    box-shadow: 0 0 15px -1px rgba(0,0,0,.4);
+}
+
+.conteiner-faq .item-faq .question span {
+    position: absolute;
+    left: 10px;
+    font-size: 3rem;
+    top: 10px;
+    opacity: .1;
+}
+
+/* respuesta */
+
+.conteiner-faq .item-faq .answer {
+    position: relative;
+    padding: 0 20px 0 80px;
+    overflow: hidden;
+    height: 0;
+    transition: .4s;
+}
+
+.conteiner-faq .item-faq .answer p {
+    font-size: 1.3rem;
+}
+
+.conteiner-faq .item-faq .answer span {
+    position: absolute;
+    left: 10px;
+    font-size: 3rem;
+    top: -10px;
+    opacity: .2;
+}
+
+
+/* * == menús sticky y scroll == */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;	
+	background: #f2f2f2;
+}
+
+
+/*  CONTENEDOR DE IMAGEN */
+.contenedor-navimag {
+	height: 30vh;
+}
+
+.contenedor-navimag img {
+	width: 100%;
+	height: 80%;
+	vertical-align: top;
+	object-fit: cover;
+	object-position: 0 bottom;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+
+)
+,url("/imag/archivoimag/imagensinfondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+
+
+/*  MAIN */
+
+main {
+	min-height: 100vh;
+}
+
+main .modulo p {
+	margin-bottom: 20px;
+	line-height: 30px;
+	color: #525151;
+}
+
+main .modulo .temas {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	padding-top: 20px;
+}
+
+main .modulo .fecha {
+	font-size: 14px;
+	color: #B5B5B5;
+}
+
+/*  ASIDE */
+
+aside {
+	min-width: 30%;
+	margin: 40px 20px 20px 0;
+	height: 100%;
+	background: #d81434;
+	padding: 20px;
+	border-radius: 3px;
+    position: sticky;
+    top: 0;
+}
+
+aside .temas {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #f2f2f2;
+}
+
+aside .indice a {
+	display: block;
+	margin-bottom: 10px;
+	color: #ffcd45;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/*  MEDIA QUERIES movil */
+
+@media screen and (max-width: 900px){
+	.navbar .contenido {
+		flex-wrap: wrap;
+		margin: 0;
+		width: 100%;
+	}
+
+	.navbar a {
+		width: auto;
+		flex: 1;
+	}
+
+	main .contenido {
+		flex-direction: column;
+	}
+
+    aside {
+        position: static;
+        margin: 40px 0 0 0;
+    }
+}
+
+/*  formularios */
+
